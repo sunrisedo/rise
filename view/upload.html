@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <body style="text-align:center">
+        <form action="/server/upload" method="post" enctype="multipart/form-data">         
+               <input type="file" name="file" value="" onchange=""/> 
+               <input type="submit" name="submit"/>
+		</form>
+	</br>
+		<form action="/server/symbolinit?Device=TEST" method="post" >
+			<input type="submit" name="submit" value="显示测试" />
+        </form>
+        <body>
+            </br>
+            <div>{{ . }}</div>
+            </br>
+            {{range .Market}}<div>{{ . }}</div>{{else}}{{end}}
+            </br>
+            {{range .Product}}<div>{{ . }}</div>{{else}}{{end}}
+            </br>
+            {{range .Currency}}<div>{{ . }}</div>{{else}}{{end}}
+        </body>
+	</body>
+</html>
+
+
+
+    
